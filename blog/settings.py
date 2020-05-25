@@ -125,17 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-                    os.path.join(BASE_DIR,"blog_main\static"),
+                    os.path.join(BASE_DIR,"blog_main/static"),
 
 ]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static")
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 STATIC_URL = '/static/'
-
-MEDIA_ROOT = (
-BASE_DIR
-)
-
-
+STATIC_ROOT = "/home/gokul1099/static"
+MEDIA_ROOT = os.path.join(BASE_DIR)
 MEDIA_URL = '/media/'
