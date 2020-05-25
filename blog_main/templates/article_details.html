@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load markdown_extras %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{post.title}}</title>
+  </head>
+  <body>
+    <h1>{{post.title}}</h1>
+    <small>By:{{post.author.first_name}}</small><br>
+    <br>
+
+    <p>{{post.body | markdown | safe}}</p>
+
+    <a href="{% url 'home' %}" class="btn btn-secondary">BACK</a>
+    {% endblock %}
+
+  </body>
+</html>
